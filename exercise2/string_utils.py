@@ -15,9 +15,11 @@ def count_vowels(s: str) -> int:
 
 
 def is_palindrome(s: str) -> bool:
-    cleaned = s.lower().replace(" ", "")
-    return cleaned == cleaned[::-1]
+    #We put everything in lowercase and remove the spaces to make comparison easier.
+    b = s.lower().replace(" ", "")
+    return b == b[::-1]
 
 
 def capitalize_words(s: str) -> str:
-   return s.title()
+   #title can capitalize the first letter of each word in the input string
+   return s.title()  
