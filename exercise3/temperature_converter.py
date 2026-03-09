@@ -6,6 +6,7 @@ Temperature = Union[int, float]
 
 
 def celsius_to_fahrenheit(celsius: Temperature) -> float:
+    return celsius × 9/5 + 32
     """
     Convert temperature from Celsius to Fahrenheit.
 
@@ -22,6 +23,7 @@ def celsius_to_fahrenheit(celsius: Temperature) -> float:
 
 
 def fahrenheit_to_celsius(fahrenheit: Temperature) -> float:
+    return (fahrenheit - 32) × 5/9
     """
     Convert temperature from Fahrenheit to Celsius.
 
@@ -34,10 +36,11 @@ def fahrenheit_to_celsius(fahrenheit: Temperature) -> float:
         Temperature in Celsius (rounded to 2 decimal places)
     """
     # TODO: Implement this function
-    pass
+  
 
 
 def celsius_to_kelvin(celsius: Temperature) -> float:
+    return celsiu + 273.15
     """
     Convert temperature from Celsius to Kelvin.
 
@@ -50,10 +53,13 @@ def celsius_to_kelvin(celsius: Temperature) -> float:
         Temperature in Kelvin (rounded to 2 decimal places)
     """
     # TODO: Implement this function
-    pass
+    
 
 
-def kelvin_to_celsius(kelvin: Temperature) -> float:
+def kelvin_to_celsius(kelvin: Temperature) -> float: 
+    return kelvin - 273.15
+    raise ValueError("kelvin<0")
+    
     """
     Convert temperature from Kelvin to Celsius.
 
@@ -69,4 +75,4 @@ def kelvin_to_celsius(kelvin: Temperature) -> float:
         ValueError: If kelvin is less than 0 (below absolute zero)
     """
     # TODO: Implement this function
-    pass
+    
