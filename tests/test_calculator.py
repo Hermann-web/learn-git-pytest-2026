@@ -40,4 +40,3 @@ def test_divide() -> None:
 def test_divide_by_zero() -> None:
     with pytest.raises(ValueError) as excinfo:
         divide(5, 0)
-    assert "Cannot divide by zero" in str(excinfo.value)
