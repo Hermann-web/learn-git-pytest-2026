@@ -50,7 +50,6 @@ def multiply(a: Number, b: Number) -> Number:
     # TODO: Implement this function
     return a * b
 
-
 def divide(a: Number, b: Number) -> Number:
     """
     Return the result of dividing a by b.

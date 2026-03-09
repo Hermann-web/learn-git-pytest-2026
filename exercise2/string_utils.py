@@ -43,8 +43,7 @@ def is_palindrome(s: str) -> bool:
         True if the string is a palindrome, False otherwise
     """
     # TODO: Implement this function
-    cleaned = ''.join(c.lower() for c in s if c.isalnum())
-    return cleaned == cleaned[::-1]
+    return (cleaned := ''.join(c.lower() for c in s if c.isalnum())) == cleaned[::-1]
 
 
 def capitalize_words(s: str) -> str:
