@@ -2,6 +2,10 @@
 
 
 def reverse_string(s: str) -> str:
+    r=''
+    for i in range(1,len(s)+1):
+        r+=s[-i]
+    return r
     """
     Return the input string in reverse order.
 
@@ -16,6 +20,13 @@ def reverse_string(s: str) -> str:
 
 
 def count_vowels(s: str) -> int:
+    vow=['a','e','i','o','u']
+    s=s.lower()
+    res=0
+    for i in s:
+        if i in vow: res+=1
+    return res
+
     """
     Return the number of vowels (a, e, i, o, u) in the input string.
     Case-insensitive: both uppercase and lowercase vowels should be counted.
@@ -31,6 +42,9 @@ def count_vowels(s: str) -> int:
 
 
 def is_palindrome(s: str) -> bool:
+    s=s.replace(" ","").lower()
+    
+    return s == reverse_string(s)
     """
     Check if the input string is a palindrome.
     A palindrome reads the same backward as forward.
@@ -47,6 +61,19 @@ def is_palindrome(s: str) -> bool:
 
 
 def capitalize_words(s: str) -> str:
+    if s=='': return ''
+    sl= [i for i in s]
+    sl[0]= sl[0].upper()
+    for j in range(len(sl)):
+        if sl[j]==' ':
+            if sl[j+1]!= ' ':
+                sl[j+1]= sl[j+1].upper()
+    res= ''
+    for k in sl:
+        res+=k
+    return res
+            
+
     """
     Capitalize the first letter of each word in the input string.
 
