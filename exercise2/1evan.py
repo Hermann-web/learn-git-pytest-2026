@@ -48,9 +48,9 @@ def is_palindrome(s: str) -> bool:
     Returns:
         True if the string is a palindrome, False otherwise
     """
-    # TODO: Implement this 
-    s_r=s.replace(" ","").lower()
-    return  s_r ==reverse_string(s_r)
+    # TODO: Implement this function
+    s_r= s.replace(" "," ").lower()
+    return s_r ==reverse_string()
     
 
 
@@ -67,15 +67,11 @@ def capitalize_words(s: str) -> str:
     if not s :
         return ""
     else:
-        L=s.split(" ")
+        L=s.split()
         T=[]
         for i in L:
-            if i =="":
-                T.append("")
-            else :
-
-                 a=i[0]
-                 b=i[1:]
-                 c=a.upper() + b 
-                 T.append(c)
-    return " ".join(T) 
+            a=i[0]
+            b=i[1:]
+            c=a.upper() + b 
+            T.append(c)
+    return " ".join(T)
