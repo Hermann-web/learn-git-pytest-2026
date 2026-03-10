@@ -1,60 +1,25 @@
 # Exercise 2: String Utilities
-
-
 def reverse_string(s: str) -> str:
-    """
-    Return the input string in reverse order.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The reversed string
-    """
-    # TODO: Implement this function
-    pass
-
+    # L'astuce magique de Python pour inverser du texte !
+    return s[::-1]
 
 def count_vowels(s: str) -> int:
-    """
-    Return the number of vowels (a, e, i, o, u) in the input string.
-    Case-insensitive: both uppercase and lowercase vowels should be counted.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The number of vowels in the string
-    """
-    # TODO: Implement this function
-    pass
-
+    vowels = "aeiou"
+    count = 0
+    # s.lower() permet de tout transformer en minuscules pour ne rien rater
+    for char in s.lower():
+        if char in vowels:
+            count += 1
+    return count
 
 def is_palindrome(s: str) -> bool:
-    """
-    Check if the input string is a palindrome.
-    A palindrome reads the same backward as forward.
-    Spaces and case should be ignored.
-
-    Args:
-        s: Input string
-
-    Returns:
-        True if the string is a palindrome, False otherwise
-    """
-    # TODO: Implement this function
-    pass
-
+    # 1. On met tout en minuscules (.lower())
+    # 2. On remplace les espaces par "rien" pour les effacer (.replace(" ", ""))
+    cleaned_s = s.lower().replace(" ", "")
+    
+    # On vérifie si le mot nettoyé est égal à son inverse
+    return cleaned_s == cleaned_s[::-1]
 
 def capitalize_words(s: str) -> str:
-    """
-    Capitalize the first letter of each word in the input string.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The input string with the first letter of each word capitalized
-    """
-    # TODO: Implement this function
-    pass
+    # Python a une fonction toute prête pour mettre des majuscules à chaque mot
+    return s.title()
