@@ -11,8 +11,10 @@ def reverse_string(s: str) -> str:
     Returns:
         The reversed string
     """
-    # TODO: Implement this function
-    pass
+    reverse_string = ""
+    for c in range(len(s)-1, -1, -1):
+        reverse_string += s[c]
+    return reverse_string
 
 
 def count_vowels(s: str) -> int:
@@ -26,8 +28,11 @@ def count_vowels(s: str) -> int:
     Returns:
         The number of vowels in the string
     """
-    # TODO: Implement this function
-    pass
+    count_vowels = 0
+    for c in s:
+        if c in "aeiouAEIOU":
+            count_vowels += 1
+    return count_vowels
 
 
 def is_palindrome(s: str) -> bool:
@@ -42,8 +47,26 @@ def is_palindrome(s: str) -> bool:
     Returns:
         True if the string is a palindrome, False otherwise
     """
-    # TODO: Implement this function
-    pass
+    cleaned_string = s.replace(" ", "").lower()
+    return cleaned_string == reverse_string(cleaned_string)
+    
+
+
+# def capitalize_words(s: str) -> str:
+#     """
+#     Capitalize the first letter of each word in the input string.
+
+#     Args:
+#         s: Input string
+
+#     Returns:
+#         The input string with the first letter of each word capitalized
+#     """
+#     split_string = s.split() # Séparer la phrase en mots
+#     capitalized_string = ""
+#     for word in split_string:
+#         capitalized_string += word.capitalize() + " " # Capitaliser chaque mot et ajouter un espace
+#     return capitalized_string.strip() # Supprimer l'espace final à la fin de chaque mot capitalisé
 
 
 def capitalize_words(s: str) -> str:
@@ -51,10 +74,9 @@ def capitalize_words(s: str) -> str:
     Capitalize the first letter of each word in the input string.
 
     Args:
-        s: Input string
+        s: Input string 
 
     Returns:
         The input string with the first letter of each word capitalized
     """
-    # TODO: Implement this function
-    pass
+    return s.title()
