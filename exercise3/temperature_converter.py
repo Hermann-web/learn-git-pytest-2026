@@ -57,8 +57,6 @@ def celsius_to_kelvin(celsius: Temperature) -> float:
 
 
 def kelvin_to_celsius(kelvin: Temperature) -> float:
-    return  kelvin - 273.15
-
     """
     Convert temperature from Kelvin to Celsius.
 
@@ -73,5 +71,8 @@ def kelvin_to_celsius(kelvin: Temperature) -> float:
     Raises:
         ValueError: If kelvin is less than 0 (below absolute zero)
     """
+    if kelvin < 0:
+        raise ValueError("Temperature cannot be below absolute zero")
+    return round(kelvin - 273.15, 2)
     # TODO: Implement this function
-    pass
+    
