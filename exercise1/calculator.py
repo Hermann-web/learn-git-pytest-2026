@@ -7,6 +7,7 @@ Number = Union[int, float]
 
 def add(a: Number, b: Number) -> Number:
     return a+b
+<<<<<<< Updated upstream
 
 
 def subtract(a: Number, b: Number) -> Number:
@@ -15,6 +16,12 @@ def subtract(a: Number, b: Number) -> Number:
 
 def multiply(a: Number, b: Number) -> Number:
    return a*b
+=======
+def subtract(a: Number, b: Number) -> Number:
+   return a-b
+def multiply(a: Number, b: Number) -> Number:
+   a*b
+>>>>>>> Stashed changes
 
 
 def divide(a: Number, b: Number) -> Number:
