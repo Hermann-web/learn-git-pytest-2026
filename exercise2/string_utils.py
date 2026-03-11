@@ -2,59 +2,55 @@
 
 
 def reverse_string(s: str) -> str:
-    """
-    Return the input string in reverse order.
+    A=""
+    n=len(s)
+    for i in range(n):
+        A=s[n-i]
+    return A    
 
-    Args:
-        s: Input string
-
-    Returns:
-        The reversed string
-    """
-    # TODO: Implement this function
-    pass
+        
+        
 
 
 def count_vowels(s: str) -> int:
-    """
-    Return the number of vowels (a, e, i, o, u) in the input string.
-    Case-insensitive: both uppercase and lowercase vowels should be counted.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The number of vowels in the string
-    """
-    # TODO: Implement this function
-    pass
+    A='aeiouyAEIOUY'
+    B=s
+    n=len(s)
+    c=0
+    for i in range(n):
+        for j in range(len(A)):
+            if s[i]==s[j]:
+               c+=1
+    return c           
+        
 
 
 def is_palindrome(s: str) -> bool:
-    """
-    Check if the input string is a palindrome.
-    A palindrome reads the same backward as forward.
-    Spaces and case should be ignored.
-
-    Args:
-        s: Input string
-
-    Returns:
-        True if the string is a palindrome, False otherwise
-    """
-    # TODO: Implement this function
-    pass
+    n=len(s)
+    if s[0]==s[n]:
+        return True
+    else: return False     
+        
 
 
 def capitalize_words(s: str) -> str:
-    """
-    Capitalize the first letter of each word in the input string.
+    A=''
+    c=True # detecte le debut d un mot 
+    for i in s :
+      code-ascii=ord(i)
+      if c==True and 97<=code-ascii<=112:
+        A+=chr(code-ascii-32)
+        c=False 
+      else :
+        A+=i 
+        if i=='' :
+            c=True
+        else :
+            c= False 
+    return A   
 
-    Args:
-        s: Input string
 
-    Returns:
-        The input string with the first letter of each word capitalized
-    """
-    # TODO: Implement this function
-    pass
+       
+    
+    
+
