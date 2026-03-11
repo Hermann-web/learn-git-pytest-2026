@@ -18,6 +18,7 @@ def add(a: Number, b: Number) -> Number:
     """
     # TODO: Implement this function
     pass
+    return a+b
 
 
 def subtract(a: Number, b: Number) -> Number:
@@ -33,6 +34,7 @@ def subtract(a: Number, b: Number) -> Number:
     """
     # TODO: Implement this function
     pass
+    return a - b
 
 
 def multiply(a: Number, b: Number) -> Number:
@@ -66,3 +68,7 @@ def divide(a: Number, b: Number) -> Number:
     """
     # TODO: Implement this function
     pass
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+ 
