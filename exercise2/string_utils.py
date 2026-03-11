@@ -11,8 +11,8 @@ def reverse_string(s: str) -> str:
     Returns:
         The reversed string
     """
-    # TODO: Implement this function
-    pass
+    # exemple: "hello" -> "olleh"
+    return s[::-1]
 
 
 def count_vowels(s: str) -> int:
@@ -56,5 +56,4 @@ def capitalize_words(s: str) -> str:
     Returns:
         The input string with the first letter of each word capitalized
     """
-    # TODO: Implement this function
-    pass
+    return s.title()
