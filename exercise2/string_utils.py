@@ -27,7 +27,7 @@ def count_vowels(s: str) -> int:
         The number of vowels in the string
     """
     # TODO: Implement this function
-    L=[a, e, i, o, u]
+    L=['A','E','I','O','U','a','e','i','o','u']
     c=0
     for i in range(len(s)):
         if s[i] in L:
