@@ -11,8 +11,8 @@ def reverse_string(s: str) -> str:
     Returns:
         The reversed string
     """
-    # TODO: Implement this function
-    pass
+    # exemple: "hello" -> "olleh"
+    return s[::-1]
 
 
 def count_vowels(s: str) -> int:
