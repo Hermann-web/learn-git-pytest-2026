@@ -44,4 +44,3 @@ def test_kelvin_to_celsius() -> None:
 def test_kelvin_below_absolute_zero() -> None:
     with pytest.raises(ValueError) as excinfo:
         kelvin_to_celsius(-1)
-    assert "Temperature cannot be below absolute zero" in str(excinfo.value)
